@@ -1,0 +1,93 @@
+.header {
+  background-color: rgb(255, 255, 255);
+  color: rgb(51, 51, 51);
+  position: relative;
+  z-index: 1000;
+  padding: 0.8rem 1.5rem;
+  border-bottom: 1px solid rgb(229, 231, 235);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: rgb(51, 51, 51);
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.login-btn,
+.register-btn,
+.language-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.language-selector {
+  position: relative;
+}
+
+.language-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  min-width: 120px;
+  z-index: 10;
+  margin-top: 4px;
+}
+
+.language-option {
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #374151;
+  transition: background-color 0.2s ease;
+}
+
+.language-option:hover {
+  background-color: #f9fafb;
+}
+
+.language-option:first-child {
+  border-radius: 8px 8px 0 0;
+}
+
+.language-option:last-child {
+  border-radius: 0 0 8px 8px;
+}
+
+@media (max-width: 768px) {
+  .header-actions {
+    gap: 8px;
+  }
+  
+  .login-btn,
+  .register-btn,
+  .language-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  
+  .logo h1 {
+    font-size: 20px;
+  }
+}

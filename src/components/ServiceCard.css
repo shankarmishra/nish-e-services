@@ -1,0 +1,274 @@
+/* Service Card Container */
+.service-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  position: relative;
+  margin: 0 auto 20px auto;
+  height: 100%;
+  min-height: 380px;
+}
+
+.service-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* hover effect */
+  transform: translateY(-3px);
+}
+
+.cart-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: none;
+  color: #9ca3af;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.cart-icon:hover {
+  color: #374151;
+}
+
+.cart-icon.loading {
+  animation: spin 1s linear infinite;
+}
+
+.cart-icon:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.service-header {
+  margin-bottom: 16px;
+  padding-right: 50px;
+}
+
+/* Title */
+.service-title {
+  font-size: 19px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 12px 0;
+  line-height: 1.3;
+}
+
+/* Vendor/Provider */
+.service-provider {
+  font-size: 15px;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 16px;
+}
+
+.provider-icon {
+  font-size: 17px;
+}
+
+.verified-icon {
+  color: #374151;
+  font-size: 17px;
+}
+
+.service-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.star-icon {
+  color: #fbbf24;
+  font-size: 14px;
+}
+
+.rating-value {
+  font-weight: 600;
+  color: #374151;
+}
+
+.rating-count {
+  color: #9ca3af;
+}
+
+.service-details {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Price and Time */
+.service-cost {
+  font-size: 19px;
+  font-weight: 700;
+  color: #000;
+  background: #f9fafb;
+  border: 1px solid #d1d5db;
+  padding: 7px 14px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.service-time {
+  font-size: 15px;
+  color: #6b7280;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-weight: 600;
+}
+
+.service-time::before {
+  content: "Estimated Time";
+  font-size: 13px;
+  color: #9ca3af;
+  margin-bottom: 3px;
+  font-weight: 400;
+}
+
+
+/* Required Docs */
+.required-docs {
+  margin-bottom: 22px;
+  flex-grow: 1;
+}
+
+.docs-title {
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #111827;
+  font-size: 16px;
+}
+
+.docs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.doc-tag {
+  display: inline-block;
+  background: #f3f4f6;
+  color: #374151;
+  font-size: 14px;
+  padding: 5px 12px;
+  margin: 3px 4px 3px 0;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+  font-weight: 500;
+}
+
+.view-more-btn {
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 5px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.view-more-btn:hover {
+  background-color: #e5e7eb;
+}
+
+/* Buttons */
+.service-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.guide-btn,
+.book-btn {
+  flex: 1;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.guide-btn {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.guide-btn:hover {
+  background: #e5e7eb;
+}
+
+.book-btn {
+  background: #0f172a;
+  color: #fff;
+}
+
+.book-btn:hover {
+  background: #1e293b;
+}
+
+.book-btn.loading {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.book-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    width: 100%;
+    max-width: 320px;
+    padding: 16px;
+    min-height: 360px;
+  }
+  
+  .service-title {
+    font-size: 17px;
+  }
+  
+  .service-cost {
+    font-size: 17px;
+  }
+  
+  .service-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .guide-btn,
+  .book-btn {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+}
